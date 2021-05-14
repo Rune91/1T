@@ -1,0 +1,18 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: docs/intro
+- part: Teori
+  chapters:
+  - file: docs/print_operator
+  - file: docs/variabler
+  - file: docs/input
+  - file: docs/sannhet_if
+  - file: docs/lister
+  - file: docs/lokker
+- part: Oppgaver
+  chapters:
+  - file: docs/oppgaver_a
+  - file: docs/oppgaver_b
+  - file: docs/oppgaver_c
+
