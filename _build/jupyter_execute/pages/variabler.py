@@ -20,7 +20,7 @@ fart = 60 # km/t
 tid = 2.5 # timer
 strekning = fart * tid # km
 
-I programmet over har vareiabelen strekning fått verdien 150. Programmet gir derimot ingen output siden det ikke bruker `print()`.
+I programmet over har variabelen strekning fått verdien 150. Programmet gir derimot ingen output siden det ikke bruker `print()`.
 
 ```{admonition} Prøv selv
 :class: tip

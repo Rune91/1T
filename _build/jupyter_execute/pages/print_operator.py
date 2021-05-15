@@ -1,3 +1,4 @@
+(output)=
 # 1. Output og regning
 
 ## 1.1 Skrive til skjerm (output)
