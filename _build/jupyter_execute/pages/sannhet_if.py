@@ -1,6 +1,6 @@
 # 4. Sannhetsverdier og if-setninger
 
-## Sant og usant
+## 4.1 Sant og usant
 
 Vi lager utsagn som Python evaluerer til enten `True` eller `False`. Til det bruker vi disse operatorene:
 
@@ -51,7 +51,7 @@ print(uttrykk_1 or uttrykk_2)
 Lag et uttrykk som bruker både `and` og `not` som evalueres til `True`.
 ```
 
-## If-setninger
+## 4.2 If-setninger
 
 If-setninger (også kalt *kontrollstruktur*) er et viktig verktøy for å styre et program. Kodeordene `if` og `else` bruker slik:
 

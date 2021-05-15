@@ -71,7 +71,7 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/logo_1T.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Programmering for 1T</h1>
@@ -204,13 +204,10 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/Rune91/programmering-og-modellering"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/Rune91/1T"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/Rune91/programmering-og-modellering/issues/new?title=Issue%20on%20page%20%2Fpages/input.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
         
     </div>
 </div>
@@ -229,7 +226,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Rune91/programmering-og-modellering/master?urlpath=tree/docs/pages/input.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Rune91/1T/master?urlpath=tree/docs/pages/input.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -246,6 +243,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hente-inn-tekst">
+   3.1 Hente inn tekst
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hente-inn-tall">
+   3.2 Hente inn tall
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -256,6 +271,48 @@
                 
   <div class="section" id="input">
 <h1>3. Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h1>
+<p>Programmer er mest nyttige dersom brukeren av programmet kan gi <em>input</em> til det. (Hvor gøy hadde det egentlig vært å spille Fifa dersom du ikke kunne styre spillerne eller bla i menyene?)</p>
+<p>Nå skal vi lære å gi input i form av tekst og tall.</p>
+<div class="section" id="hente-inn-tekst">
+<h2>3.1 Hente inn tekst<a class="headerlink" href="#hente-inn-tekst" title="Permalink to this headline">¶</a></h2>
+<p>Vi ber brukeren skrive inn en tekst i konsollvinduet ved å bruke <code class="docutils literal notranslate"><span class="pre">input()</span></code> sammen med en relevant tekst. Svaret blir lagret i en variabel.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tekst</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Skriv inn en tekst: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Du skrev inn dette: </span><span class="si">{</span><span class="n">tekst</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Kopier og kjør programmet over. Når det kjører, vil det stoppe og vente på at du skriver et svar og trykker <code class="docutils literal notranslate"><span class="pre">Enter</span></code> i konsollvinduet.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Lag et program som bruker to <code class="docutils literal notranslate"><span class="pre">input()</span></code>-kommandoer til å be brukeren om både fornavn og etternavn. Skriv så ut en hilsen med fullt navn.</p>
+</div>
+</div>
+<div class="section" id="hente-inn-tall">
+<h2>3.2 Hente inn tall<a class="headerlink" href="#hente-inn-tall" title="Permalink to this headline">¶</a></h2>
+<p>Ofte vil vil hente inn tall fra brukeren. <code class="docutils literal notranslate"><span class="pre">input()</span></code> leser inn svaret som en tekststreng selv om det bare inneholder tall. For å kunne gjøre regneoperasjoner må vi først gjøre det om til et heltall (<code class="docutils literal notranslate"><span class="pre">int</span></code>) eller et desimaltall (<code class="docutils literal notranslate"><span class="pre">float</span></code>).</p>
+<p>For å konvertere til heltall bruker vi kommandoen <code class="docutils literal notranslate"><span class="pre">int()</span></code>.</p>
+<p>Programmet under leser inn to vinkler i en trekant som heltall og regner så ut den tredje vinkelen.</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vinkel_1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vinkel: &quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">vinkel_2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Vinkel: &quot;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">vinkel_3</span> <span class="o">=</span> <span class="mi">180</span> <span class="o">-</span> <span class="n">vinkel_1</span> <span class="o">-</span> <span class="n">vinkel_2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Den tredje vinkelen er </span><span class="si">{</span><span class="n">vinkel_3</span><span class="si">}</span><span class="s2"> grader&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Lag et program som ber brukeren om et tall. Det skal så regne ut halvparten av tallet.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

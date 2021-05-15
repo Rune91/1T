@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Variabler" href="variabler.html" />
@@ -71,7 +73,7 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/logo_1T.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Programmering for 1T</h1>
@@ -204,13 +206,10 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/Rune91/programmering-og-modellering"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/Rune91/1T"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/Rune91/programmering-og-modellering/issues/new?title=Issue%20on%20page%20%2Fpages/print_operator.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
         
     </div>
 </div>
@@ -229,7 +228,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Rune91/programmering-og-modellering/master?urlpath=tree/docs/pages/print_operator.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Rune91/1T/master?urlpath=tree/docs/pages/print_operator.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -246,6 +245,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#skrive-til-skjerm-output">
+   1.1 Skrive til skjerm (output)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regning-med-python">
+   1.2 Regning med Python
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -256,6 +273,112 @@
                 
   <div class="section" id="output-og-regning">
 <h1>1. Output og regning<a class="headerlink" href="#output-og-regning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="skrive-til-skjerm-output">
+<h2>1.1 Skrive til skjerm (output)<a class="headerlink" href="#skrive-til-skjerm-output" title="Permalink to this headline">¶</a></h2>
+<p>Vi kan skrive tekst og verdier til konsollvinduet ved hjelp av kommandoen <code class="docutils literal notranslate"><span class="pre">print()</span></code>. Tekst må stå i anførselstegn, mens tall og variabler står uten.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dette er en tekst.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dette er en tekst.
+10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Åpne kodevinduet i Spyder. Bruk <code class="docutils literal notranslate"><span class="pre">print()</span></code> til å skrive en hyggelig hilsen. Kjør programmet med play-knappen og les hilsenen din i konsollvinduet.</p>
+</div>
+</div>
+<div class="section" id="regning-med-python">
+<h2>1.2 Regning med Python<a class="headerlink" href="#regning-med-python" title="Permalink to this headline">¶</a></h2>
+<p>Vi bruker regneartene som vi er vant med fra matematikk til å regne med tall og variabler.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Operator</p></th>
+<th class="text-align:center head"><p>Betydning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>+</p></td>
+<td class="text-align:center"><p>pluss</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>-</p></td>
+<td class="text-align:center"><p>minus</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>*</p></td>
+<td class="text-align:center"><p>gange</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>/</p></td>
+<td class="text-align:center"><p>dele</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>**</p></td>
+<td class="text-align:center"><p>potens</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>//</p></td>
+<td class="text-align:center"><p>heltallsdivisjon</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>%</p></td>
+<td class="text-align:center"><p>modulo</p></td>
+</tr>
+</tbody>
+</table>
+<p>For så styre flyten i regnestykker bruker vi paranteser akkurat som vanlig. Legg merke til at det er ikke noe problem å legge inn mellomrom i regnestykket for at det blir lettere å lese.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">5</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">7</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+12
+81
+56.9
+</pre></div>
+</div>
+</div>
+</div>
+<p>Heltallsdivisjon (<code class="docutils literal notranslate"><span class="pre">//</span></code>) er divisjon hvor resten blir forkastet. Modulo (<code class="docutils literal notranslate"><span class="pre">%</span></code>) finner resten i en heltallsdivisjon.</p>
+<p>Eksempel: <span class="math notranslate nohighlight">\(\dfrac{16}{3} = 5.3333...\)</span> Vi kjenner det også som 5 med 1 i rest.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="mi">16</span><span class="o">//</span><span class="mi">3</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="mi">16</span><span class="o">%</span><span class="k">3</span> )
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Regn ut disse regnestykkene med Python. Bruk <code class="docutils literal notranslate"><span class="pre">print()</span></code> til å skrive ut svaret til konsollvinduet.</p>
+<p><span class="math notranslate nohighlight">\(3+7*5\)</span></p>
+<p><span class="math notranslate nohighlight">\(1.2*\dfrac{7}{21} + 2^8 + \dfrac{4^2-1}{2^4+1}\)</span></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Svar</p>
+<p><span class="math notranslate nohighlight">\(3+7*5 = 38\)</span></p>
+<p><span class="math notranslate nohighlight">\(1.2*\dfrac{7}{21} + 2^8 + \dfrac{4^2-1}{2^4+1} = 257.2823429...\)</span></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Bruk <code class="docutils literal notranslate"><span class="pre">%</span></code> til å avgjøre om tallet 1974 er delelig på 7.</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Input" href="input.html" />
@@ -71,7 +73,7 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/logo_1T.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Programmering for 1T</h1>
@@ -204,13 +206,10 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/Rune91/programmering-og-modellering"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/Rune91/1T"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/Rune91/programmering-og-modellering/issues/new?title=Issue%20on%20page%20%2Fpages/variabler.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
         
     </div>
 </div>
@@ -229,7 +228,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Rune91/programmering-og-modellering/master?urlpath=tree/docs/pages/variabler.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Rune91/1T/master?urlpath=tree/docs/pages/variabler.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -246,6 +245,29 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kommentarer">
+   2.1 Kommentarer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-lage-variabler">
+   2.2 Å lage variabler
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-skrive-tall-og-tekst-sammen">
+   2.3 Å skrive tall og tekst sammen
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -256,18 +278,191 @@
                 
   <div class="section" id="variabler">
 <h1>2. Variabler<a class="headerlink" href="#variabler" title="Permalink to this headline">¶</a></h1>
-<p>Enda mer tekst</p>
-<p>Dette handler om variabler.</p>
+<div class="section" id="kommentarer">
+<h2>2.1 Kommentarer<a class="headerlink" href="#kommentarer" title="Permalink to this headline">¶</a></h2>
+<p>Det er viktig å gjøre programkode lett å lese både for deg selv og andre. Et nyttig verktøy til dette er å bruke kommentarer. En kommentar <em>gjør</em> ingenting i programmet. Alt etter <code class="docutils literal notranslate"><span class="pre">#</span></code> på en linje er en kommentar.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Dette er en kommentar</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Denne linjen regner ut 2+2</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello world
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="section" id="a-lage-variabler">
+<h2>2.2 Å lage variabler<a class="headerlink" href="#a-lage-variabler" title="Permalink to this headline">¶</a></h2>
+<p>Vi bruker variabler til å lagre tall, tekst eller annet i programmet vårt. Variabler må ha navn, som kan være på bare én bokstav eller et helt ord.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fart</span> <span class="o">=</span> <span class="mi">60</span> <span class="c1"># km/t</span>
+<span class="n">tid</span> <span class="o">=</span> <span class="mf">2.5</span> <span class="c1"># timer</span>
+<span class="n">strekning</span> <span class="o">=</span> <span class="n">fart</span> <span class="o">*</span> <span class="n">tid</span> <span class="c1"># km</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>I programmet over har vareiabelen strekning fått verdien 150. Programmet gir derimot ingen output siden det ikke bruker <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Bruk samme struktur som eksempelet over, men nå har du kjøpt poteter på butikken! Lag en variabel for vekt og en for prisen du betalte. Regn ut kilospris og skriv svaret ut til skjerm med <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
+</div>
+<p>For å lagre tekst i variabler må teksten være i anførselstegn. Variabler med tekst kalles for en <em>tekststreng</em> eller bare <em>streng</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">navn</span> <span class="o">=</span> <span class="s2">&quot;Rune&quot;</span>
+<span class="n">beskrivelse</span> <span class="o">=</span> <span class="s2">&quot; er kul&quot;</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">navn</span> <span class="o">+</span> <span class="n">beskrivelse</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rune er kul
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi kan endre innholdet i en variabel like enkelt ved å gi den en ny verdi.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi kan også bruke variabelens gamle verdi for å oppdatere den.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tall</span> <span class="o">=</span> <span class="mi">38</span>
+<span class="n">tall</span> <span class="o">=</span> <span class="n">tall</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">tall</span> <span class="o">=</span> <span class="n">tall</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tall</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>49
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Lag et program som gjør dette:</p>
+<ul class="simple">
+<li><p>Oppretter en variabel x med verdi 11</p></li>
+<li><p>Oppretter en ny variabel y som er det dobbelte av x</p></li>
+<li><p>Øker y med 1</p></li>
+<li><p>Skriver ut svaret til skjerm</p></li>
+</ul>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Hva blir output av programmet under? Når du har bestemt deg, kopier koden over i Spyder og sjekk om du hadde rett.</p>
+</div>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alice</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">bob</span> <span class="o">=</span> <span class="n">alice</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">cecilie</span> <span class="o">=</span> <span class="n">bob</span> <span class="o">+</span> <span class="n">alice</span>
+
+<span class="n">cecilie</span> <span class="o">=</span> <span class="n">cecilie</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">cecilie</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="a-skrive-tall-og-tekst-sammen">
+<h2>2.3 Å skrive tall og tekst sammen<a class="headerlink" href="#a-skrive-tall-og-tekst-sammen" title="Permalink to this headline">¶</a></h2>
+<p>I <code class="docutils literal notranslate"><span class="pre">print()</span></code> kan vi skrive verdien av variabler sammen med en tekst. Til dette bruker vi et såkalt f-literal. Vi setter <code class="docutils literal notranslate"><span class="pre">f</span></code> foran tekst-strengen, og bruker variabelnavnet inne i <code class="docutils literal notranslate"><span class="pre">{}</span></code> i teksten.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">navn</span> <span class="o">=</span> <span class="s2">&quot;Rune&quot;</span>
+<span class="n">mat</span> <span class="o">=</span> <span class="s2">&quot;lapskaus&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hei, jeg heter </span><span class="si">{</span><span class="n">navn</span><span class="si">}</span><span class="s2"> og jeg liker </span><span class="si">{</span><span class="n">mat</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hei, jeg heter Rune og jeg liker lapskaus.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Bruk variabler og <code class="docutils literal notranslate"><span class="pre">print()</span></code> til å skrive ut en hilsen som forteller om deg og dine hobbyer.</p>
+</div>
+<p>Vi bruker også f-literaler til å skrive tall sammen med tekst. Når vi gjør det, har vi også muligheten til å styre antall desimaler som skrives ut. <code class="docutils literal notranslate"><span class="pre">{c:.2f}</span></code> betyr at variabelen c skrives ut med 2 desimaler.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">22</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> delt på </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> er </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> delt på </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> er </span><span class="si">{</span><span class="n">c</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22 delt på 7 er 3.142857142857143
+22 delt på 7 er 3.14
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vi kan også velge å skrive ut tall på standardform. Til dette bruker vi <code class="docutils literal notranslate"><span class="pre">.2e</span></code> (eller <code class="docutils literal notranslate"><span class="pre">.3e</span></code> eller <code class="docutils literal notranslate"><span class="pre">.7e</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="mi">300000000</span> <span class="c1"># m/s</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Lyshastigheten er </span><span class="si">{</span><span class="n">c</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2"> m/s.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lyshastigheten er 3.00e+08 m/s.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Lag et program som utfører regnestykket <span class="math notranslate nohighlight">\(2*5 - 1\)</span>. Det skal så skrive ut svaret i en svarsetning slik:</p>
+<p><strong>2*5-1 er lik 31</strong></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Lag et program som regner ut <span class="math notranslate nohighlight">\(\dfrac{14}{3}\)</span> og skriver ut svaret med 3 desimaler.</p>
 </div>
 </div>
 </div>
