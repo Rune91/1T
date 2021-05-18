@@ -243,6 +243,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lage-og-legge-til-i-en-liste">
+   5.1 Lage og legge til i en liste
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plukke-ut-fra-en-liste">
+   5.2 Plukke ut fra en liste
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -253,7 +271,122 @@
                 
   <div class="section" id="lister">
 <h1>5. Lister<a class="headerlink" href="#lister" title="Permalink to this headline">¶</a></h1>
-<p>Innhold kommer.</p>
+<p>En liste inneholder flere tall eller flere tekststrenger.</p>
+<div class="section" id="lage-og-legge-til-i-en-liste">
+<h2>5.1 Lage og legge til i en liste<a class="headerlink" href="#lage-og-legge-til-i-en-liste" title="Permalink to this headline">¶</a></h2>
+<p>Vi oppretter en liste enten tom, eller med noen verdier i. Her lager vi en liste med de 7 første primtallene.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primtall</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">primtall</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 3, 5, 7, 11, 13, 17]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">favorittmat</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lapskaus&quot;</span><span class="p">,</span> <span class="s2">&quot;taco&quot;</span><span class="p">,</span> <span class="s2">&quot;fårikål&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">favorittmat</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;lapskaus&#39;, &#39;taco&#39;, &#39;fårikål&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Lag en liste med dine favorittdyr. Skriv den til skjerm.</p>
+</div>
+<p>Vi kan også legge til elementer i en liste som allerede eksisterer ved å bruke <code class="docutils literal notranslate"><span class="pre">append()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">favorittmat</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lapskaus&quot;</span><span class="p">,</span> <span class="s2">&quot;taco&quot;</span><span class="p">,</span> <span class="s2">&quot;fårikål&quot;</span><span class="p">]</span>
+<span class="n">favorittmat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;fiskekaker&quot;</span><span class="p">)</span>
+<span class="n">favorittmat</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;iskrem&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">favorittmat</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;lapskaus&#39;, &#39;taco&#39;, &#39;fårikål&#39;, &#39;fiskekaker&#39;, &#39;iskrem&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Bruk <code class="docutils literal notranslate"><span class="pre">append()</span></code> for å legge til to ekstra dyr i lista di.</p>
+</div>
+</div>
+<div class="section" id="plukke-ut-fra-en-liste">
+<h2>5.2 Plukke ut fra en liste<a class="headerlink" href="#plukke-ut-fra-en-liste" title="Permalink to this headline">¶</a></h2>
+<p>Lister er veldig nyttige fordi vi kan gå inn og inspisere enkelte elementer, lese av lengden, søke etter innhold og mye mer.</p>
+<p>Vi bruker <code class="docutils literal notranslate"><span class="pre">len()</span></code> til å lese av lengden:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">lengden</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">lengden</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Bruk <code class="docutils literal notranslate"><span class="pre">len()</span></code> til å lese av lengden på lista di over favorittdyr.</p>
+</div>
+<p>Vi inspiserer ett spesifikt element ved hjelp av <code class="docutils literal notranslate"><span class="pre">[]</span></code>-paranteser.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lapskaus&quot;</span><span class="p">,</span> <span class="s2">&quot;Taco&quot;</span><span class="p">,</span> <span class="s2">&quot;fårikål&quot;</span><span class="p">,</span> <span class="s2">&quot;fiskekaker&quot;</span><span class="p">,</span> <span class="s2">&quot;iskrem&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">liste</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">liste</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lapskaus
+fiskekaker
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">liste[0]</span></code> leser av det 0-te elementet i lista. Python teller alltid fra 0, ikke fra 1. Siden det <em>første</em> (altså det 0-te) elementet er <code class="docutils literal notranslate"><span class="pre">lapskaus</span></code>, blir det skrevet til skjerm av <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p>
+<p>Legg merke til at <code class="docutils literal notranslate"><span class="pre">liste[3]</span></code> gir <code class="docutils literal notranslate"><span class="pre">fiskekaker</span></code>, siden det er det tredje elementet når man teller fra 0. Forvirra? Så bra.</p>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Legg inn denne lista over de 25 første primtallene. Bruk <code class="docutils literal notranslate"><span class="pre">[]</span></code> til å finne ut:</p>
+<ul class="simple">
+<li><p>Hva er primtall nummer 12?</p></li>
+<li><p>Hva er differansen mellom primtall nummer 19 og primtall nummer 7?</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">7,</span> <span class="pre">11,</span> <span class="pre">13,</span> <span class="pre">17,</span> <span class="pre">19,</span> <span class="pre">23,</span> <span class="pre">29,</span> <span class="pre">31,</span> <span class="pre">37,</span> <span class="pre">41,</span> <span class="pre">43,</span> <span class="pre">47,</span> <span class="pre">53,</span> <span class="pre">59,</span> <span class="pre">61,</span> <span class="pre">67,</span> <span class="pre">71,</span> <span class="pre">73,</span> <span class="pre">79,</span> <span class="pre">83,</span> <span class="pre">89,</span> <span class="pre">97]</span></code></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Svar</p>
+<ul class="simple">
+<li><p>Primtall nummer 12 er <strong>37</strong></p></li>
+<li><p>Primtall 19 - primtall 7 er <strong>48</strong></p></li>
+</ul>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

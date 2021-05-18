@@ -1,3 +1,6 @@
-# Oppgavesett B
+#!/usr/bin/env python
+# coding: utf-8
 
-Innhold kommer.
+# (oppgaver-b)=
+# # Oppgavesett B
+# Disse oppgavene bruker teorikapitler 5-6.

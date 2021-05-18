@@ -1,3 +1,6 @@
-# Oppgavesett C
+#!/usr/bin/env python
+# coding: utf-8
 
-Innhold kommer.
+# # Oppgavesett C
+
+# Innhold kommer.

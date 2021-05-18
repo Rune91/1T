@@ -1,57 +1,65 @@
-(oppgaver-a)=
-# Oppgavesett A
-Disse oppgavene bruker teorikapitler 1-4.
+#!/usr/bin/env python
+# coding: utf-8
 
----
-```{admonition} A.1: Tallregning
-:class: tip
-Lag en variabel med verdien 7. Gjør følgende endringer på variabelen:
-* 3 ganger så stor
-* Legg til 8
-* Opphøy den i andre
+# (oppgaver-a)=
+# # Oppgavesett A
+# Disse oppgavene bruker teorikapitler 1-4.
 
-Skriv så ut variabelen med `print()`
-```
+# ---
+# ```{admonition} A.1: Tallregning
+# :class: tip
+# Lag en variabel med verdien 7. Gjør følgende endringer på variabelen:
+# * 3 ganger så stor
+# * Legg til 8
+# * Opphøy den i andre
+# 
+# Skriv så ut variabelen med `print()`
+# ```
 
----
-```{admonition} A.2: Klokka
-:class: tip
-Det var midnatt for 2387199 timer siden. Hvor mye er klokka nå?
-```
+# ---
+# ```{admonition} A.2: Klokka
+# :class: tip
+# Det var midnatt for 2387199 timer siden. Hvor mye er klokka nå?
+# ```
 
-```{admonition} Hint!
-:class: dropdown
-Her er modulo-operatoren (`%`) nyttig.
-```
+# ```{admonition} Hint!
+# :class: dropdown
+# Her er modulo-operatoren (`%`) nyttig.
+# ```
 
----
-```{admonition} A.3: Vinkelregning
-:class: tip
-Lag et program som spør brukeren om en vinkel i grader. Det skal så gjøre vinkelen om til radianer.
-```
+# ---
+# ```{admonition} A.3: Vinkelregning
+# :class: tip
+# Lag et program som spør brukeren om en vinkel i grader. Det skal så gjøre vinkelen om til radianer.
+# 
+# $radianer = grader * \dfrac{2*pi}{360}$
+# ```
 
----
-```{admonition} A.4: Alder
-:class: tip
-Lag et program som leser inn alderen til brukeren som et tall. Programmet skal så fortelle brukeren om han er et barn, en tenåring eller voksen.
-```
+# ---
+# ```{admonition} A.4: Alder
+# :class: tip
+# Lag et program som leser inn alderen til brukeren som et tall. Programmet skal så fortelle brukeren om han er et barn, en tenåring eller voksen.
+# ```
 
-```{admonition} Hint!
-:class: dropdown
-Her må du bruke blant annet:
-* `int(input())`
-* `if`, `elif` og `else`
-* noen av operatorene `>`, `<`, `>=`, `>=`
-```
+# ```{admonition} Hint!
+# :class: dropdown
+# Her må du bruke blant annet:
+# * `int(input())`
+# * `if`, `elif` og `else`
+# * noen av operatorene `>`, `<`, `>=`, `>=`
+# ```
 
----
-```{admonition} A.5: Kalkulator
-:class: tip
-Programmet under skal lese inn to tall og en regneoperator fra brukeren. Det skal så skrive ut svaret på regnestykket.
+# ---
+# ```{admonition} A.5: Kalkulator
+# :class: tip
+# Programmet under skal lese inn to tall og en regneoperator fra brukeren. Det skal så skrive ut svaret på regnestykket.
+# 
+# **Men!** Det fungerer ikke fordi det er fullt av feil. Kopier koden og gjør endringer slik at det fungerer.
+# ```
+# 
+# 
 
-**Men!** Det fungerer ikke fordi det er fullt av feil. Kopier koden og gjør endringer slik at det fungerer.
-```
-
+# In[1]:
 
 
 print(Velkommen til min kalkulator!)
@@ -73,13 +81,14 @@ print(Ugyldig operator)
 
 print(f"{tall_1} {operator} {tall2} = {svar}")
 
----
-```{admonition} A.6: Fortegn
-:class: tip
-Be brukeren om to tall. Programmet skal så avgjøre om de to tallene har likt eller ulikt fortegn. Skriv resultatet til skjerm.
-```
 
-```{admonition} Hint!
-:class: dropdown
-Neida, denne må du klare selv!
-```
+# ---
+# ```{admonition} A.6: Fortegn
+# :class: tip
+# Be brukeren om to tall. Programmet skal så avgjøre om de to tallene har likt eller ulikt fortegn. Skriv resultatet til skjerm.
+# ```
+
+# ```{admonition} Hint!
+# :class: dropdown
+# Neida, denne må du klare selv!
+# ```
