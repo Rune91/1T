@@ -260,6 +260,11 @@
    6.2 while-løkker
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lokker-sammen-med-lister">
+   6.3 Løkker sammen med lister
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -392,7 +397,87 @@
 </div>
 <div class="section" id="while-lokker">
 <h2>6.2 while-løkker<a class="headerlink" href="#while-lokker" title="Permalink to this headline">¶</a></h2>
-<p>Innhold kommer.</p>
+<p>Vi bruker ofte while-løkker når vi på forhånd ikke vet hvor mange ganger koden skal kjøre. Den bruker ordet <code class="docutils literal notranslate"><span class="pre">while</span></code> sammen med et utsagn som enten blir <code class="docutils literal notranslate"><span class="pre">True</span></code> eller <code class="docutils literal notranslate"><span class="pre">False</span></code>. Koden i while-løkka kjører så lenge uttrykket er <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tall</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">tall</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tallet er </span><span class="si">{</span><span class="n">tall</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">tall</span> <span class="o">=</span> <span class="n">tall</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tallet er 0
+Tallet er 1
+Tallet er 2
+Tallet er 3
+Tallet er 4
+Tallet er 5
+Tallet er 6
+Tallet er 7
+Tallet er 8
+Tallet er 9
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">tall</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> vil være <code class="docutils literal notranslate"><span class="pre">True</span></code> helt til tallet økes til 10, så da stopper løkka.</p>
+<p>Det går også an å bruke <code class="docutils literal notranslate"><span class="pre">while</span></code> til å lage evige løkker.</p>
+<p><strong>while True:<br />
+      print(“Hei på deg”)</strong></p>
+<p>Dersom du kjører dette, vil konsollvinduet henge seg opp og aldri slutte å skrive ut <em>Hei på deg</em>. Avslutt programmet ved å trykke på stoppknappen i Spyder.</p>
+<div class="tip admonition">
+<p class="admonition-title">Prøv selv</p>
+<p>Lag en while-løkke som gir følgende output:<br />
+<strong>1<br />
+2<br />
+4<br />
+8<br />
+16<br />
+32<br />
+64<br />
+128</strong></p>
+</div>
+</div>
+<div class="section" id="lokker-sammen-med-lister">
+<h2>6.3 Løkker sammen med lister<a class="headerlink" href="#lokker-sammen-med-lister" title="Permalink to this headline">¶</a></h2>
+<p>Løkker og lister passer godt sammen. Vi kan bruke en <code class="docutils literal notranslate"><span class="pre">for</span></code>-løkke til å skrive skrive ut alle elementene i en liste hver for seg:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">favorittmat</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lapskaus&quot;</span><span class="p">,</span> <span class="s2">&quot;taco&quot;</span><span class="p">,</span> <span class="s2">&quot;fårikål&quot;</span><span class="p">,</span> <span class="s2">&quot;fiskekaker&quot;</span><span class="p">,</span> <span class="s2">&quot;iskrem&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">mat</span> <span class="ow">in</span> <span class="n">favorittmat</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jeg liker </span><span class="si">{</span><span class="n">mat</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jeg liker lapskaus
+Jeg liker taco
+Jeg liker fårikål
+Jeg liker fiskekaker
+Jeg liker iskrem
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dette er en litt annen måte å bruke en <code class="docutils literal notranslate"><span class="pre">for</span></code>-løkke på, som ikke bruker <code class="docutils literal notranslate"><span class="pre">range()</span></code>. Her blir hvert element i lista satt inn i <code class="docutils literal notranslate"><span class="pre">mat</span></code> etter hverandre.</p>
+<p>Vi kan også bruke løkker til å fylle opp en liste. <code class="docutils literal notranslate"><span class="pre">tall</span> <span class="pre">=</span> <span class="pre">[]</span></code> lager en tom liste, som fylles opp i <code class="docutils literal notranslate"><span class="pre">for</span></code>-løkka:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tall</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="n">tall</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tall</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+</pre></div>
+</div>
+</div>
+</div>
 <p>Du er nå klar til å gjøre <a class="reference internal" href="oppgaver_b.html#oppgaver-b"><span class="std std-ref">oppgavesett B</span></a></p>
 </div>
 </div>

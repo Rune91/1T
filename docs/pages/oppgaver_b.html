@@ -254,6 +254,76 @@
   <div class="section" id="oppgavesett-b">
 <span id="oppgaver-b"></span><h1>Oppgavesett B<a class="headerlink" href="#oppgavesett-b" title="Permalink to this headline">¶</a></h1>
 <p>Disse oppgavene bruker teorikapitler 5-6.</p>
+<hr class="docutils" />
+<div class="tip admonition">
+<p class="admonition-title">A.X: Tall i liste</p>
+<p>Opprett en liste med dine favorittall. Programmet ditt skal så:</p>
+<ul class="simple">
+<li><p>Skrive ut det dobbelte av hvert tall til skjerm.</p></li>
+<li><p>Regne ut summen av alle tallene</p></li>
+</ul>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint!</p>
+<p>Her passer det med en <code class="docutils literal notranslate"><span class="pre">for</span></code>-løkke.</p>
+</div>
+<hr class="docutils" />
+<div class="tip admonition">
+<p class="admonition-title">A.X: Passord</p>
+<p>Lag et program som ber brukeren om å skrive inn et passord. Programmet skal spørre om igjen helt til passordet er riktig. Slik kan det se ut i konsollen når du kjører det ferdige programmet:<br />
+<strong>Skriv inn passord: 12345<br />
+Feil passord!<br />
+Skriv inn passord: rosebud<br />
+Feil passord!<br />
+Skriv inn passord: hunter2<br />
+Riktig passord.</strong></p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint!</p>
+<p>Her er det nyttig å bruke en <code class="docutils literal notranslate"><span class="pre">while</span></code>-løkke sammen med <code class="docutils literal notranslate"><span class="pre">input()</span></code>.</p>
+</div>
+<hr class="docutils" />
+<div class="tip admonition">
+<p class="admonition-title">A.X: Donald Trump</p>
+<p>Programkoden under leser inn alle ordene Donald Trump har brukt i sine taler i lista <code class="docutils literal notranslate"><span class="pre">ord</span></code>. Kopier koden inn i Spyder og fortsett på programmet. Ikke bry deg om at du ikke forstår alt som foregår øverst.</p>
+<ul class="simple">
+<li><p>Hvor stort er ordforrådet til Donald Trump?</p></li>
+<li><p>Skriv ut ord nummer 100 til 110.</p></li>
+<li><p>Lag et program som ber brukeren om et ord. Programmet skal så fortelle brukeren om ordet inngår i Trumps ordforråd. Programmet skal spørre om igjen helt til brukeren skriver ordet <strong>quit</strong>.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib3</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">urllib3</span><span class="o">.</span><span class="n">PoolManager</span><span class="p">()</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s2">&quot;https://raw.githubusercontent.com/ryanmcdermott/trump-speeches/master/speeches.txt&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+
+<span class="nb">ord</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; |,|</span><span class="se">\n</span><span class="s1">|</span><span class="se">\r</span><span class="s1">|\.|\?|&quot;&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="nb">ord</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="nb">ord</span><span class="p">))</span>
+<span class="nb">ord</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">ord</span><span class="p">]</span>
+<span class="nb">ord</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="nb">ord</span><span class="p">))</span>
+<span class="nb">ord</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">ord</span><span class="p">)</span>
+<span class="nb">ord</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">[</span><span class="mi">324</span><span class="p">:]</span>
+
+<span class="c1">###### Fortsett nedenfor #########</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Hint!</p>
+<p>Hint for siste punkt:</p>
+<ul class="simple">
+<li><p>Her passer det å bruke en <code class="docutils literal notranslate"><span class="pre">while</span></code>-løkke</p></li>
+<li><p>Du kan sjekke om noe finnes in en liste ved å bruke ordet <code class="docutils literal notranslate"><span class="pre">in</span></code>:<br />
+<strong>liste = [10, 12, 14, 16, 18]<br />
+if 14 in liste:<br />
+      print(“Ja!”)</strong></p></li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

@@ -83,6 +83,68 @@ print(f"Summen av tallene fra 1 til og med 100 er {totalt}.")
 
 # ## 6.2 while-løkker
 
-# Innhold kommer.
+# Vi bruker ofte while-løkker når vi på forhånd ikke vet hvor mange ganger koden skal kjøre. Den bruker ordet `while` sammen med et utsagn som enten blir `True` eller `False`. Koden i while-løkka kjører så lenge uttrykket er `True`.
+
+# In[5]:
+
+
+tall = 0
+while tall < 10:
+    print(f"Tallet er {tall}")
+    tall = tall + 1
+
+
+# `tall < 10` vil være `True` helt til tallet økes til 10, så da stopper løkka. 
+# 
+# Det går også an å bruke `while` til å lage evige løkker.
+# 
+# **while True:  
+# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Hei på deg")**
+# 
+# Dersom du kjører dette, vil konsollvinduet henge seg opp og aldri slutte å skrive ut *Hei på deg*. Avslutt programmet ved å trykke på stoppknappen i Spyder.
+
+# ```{admonition} Prøv selv
+# :class: tip
+# Lag en while-løkke som gir følgende output:  
+# **1  
+# 2  
+# 4  
+# 8  
+# 16  
+# 32  
+# 64  
+# 128**
+# ```
+
+# ## 6.3 Løkker sammen med lister
+
+# Løkker og lister passer godt sammen. Vi kan bruke en `for`-løkke til å skrive skrive ut alle elementene i en liste hver for seg:
+
+# In[6]:
+
+
+favorittmat = ["lapskaus", "taco", "fårikål", "fiskekaker", "iskrem"]
+for mat in favorittmat:
+    print(f"Jeg liker {mat}")
+
+
+# Dette er en litt annen måte å bruke en `for`-løkke på, som ikke bruker `range()`. Her blir hvert element i lista satt inn i `mat` etter hverandre.
+
+# Vi kan også bruke løkker til å fylle opp en liste. `tall = []` lager en tom liste, som fylles opp i `for`-løkka:
+
+# In[7]:
+
+
+tall = []
+for x in range(0, 30, 3):
+    tall.append(x)
+print(tall)
+
+
+# In[ ]:
+
+
+
+
 
 # Du er nå klar til å gjøre [oppgavesett B](oppgaver-b)
